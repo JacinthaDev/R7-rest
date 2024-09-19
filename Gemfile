@@ -49,6 +49,7 @@ group :development do
   # gem "spring"
 end
 
+gem "rack-cors"
 gem "devise", "~> 4.9"
 gem 'nio4r', '~> 2.7.3'
 
