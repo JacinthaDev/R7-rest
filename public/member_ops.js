@@ -212,8 +212,10 @@ function handle_members(event) {
       });
     } else if (event.target === createFact) {
       var dataObject = {
-        factText: factText.value,
-        likes: likes.value,
+        fact:{
+          fact_text: factText.value,
+          likes: likes.value,
+        }
       };
       let headers = { "Content-Type": "application/json" };
       let csrf_cookie = getCookie("CSRF-TOKEN");
@@ -250,8 +252,10 @@ function handle_members(event) {
       });
     } else if (event.target === updateFact) {
       var dataObject = {
-        factText: factText2.value,
-        likes: likes2.value,
+        fact:{
+          fact_text: factText2.value,
+          likes: likes2.value,
+        }
       };
       let headers = { "Content-Type": "application/json" };
       let csrf_cookie = getCookie("CSRF-TOKEN");
