@@ -18,6 +18,8 @@ require "action_cable/engine"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+
+
 module R7Rest
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
@@ -36,6 +38,6 @@ module R7Rest
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
     config.middleware.use ActionDispatch::Cookies
-    config.middleware.use ActionDispatch::Session::CookieStore
+    # this will send secure cookies without SSL
   end
 end
